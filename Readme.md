@@ -1,9 +1,9 @@
 
 # ForgeCore Project
 
-OrgeCore is a free-to-use commercial binary tool designed to simplify training popular neural network models.
+ForgeCore is a free-to-use commercial binary tool designed to simplify training popular neural network models.
 It supports Windows and Linux, and includes optional Rust-based inference binary compilation.
-This project is open for public use, you can find the binary file from the release link
+This project is open for public use. You can find the binary file from the release link
 
 
 ## Features 
