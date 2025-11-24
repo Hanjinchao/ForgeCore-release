@@ -3,7 +3,7 @@
 
 OrgeCore is a free-to-use commercial binary tool designed to simplify training popular neural network models.
 It supports Windows and Linux, and includes optional Rust-based inference binary compilation.
-This project is open for public use, you can find the binary file from realease link
+This project is open for public use, you can find the binary file from the release link
 
 
 ## Features 
@@ -15,16 +15,36 @@ This project is open for public use, you can find the binary file from realease 
 - Can compile an inference-ready binary using Rust
 
 ## How to Use
-Windows / Linux(Ubuntu) 
-| > Download the binary from the Releases page. \
- Install and run the application on Windows.  
- Install with [sudo dpkg -i dist/forgecore_*.deb]. 
+**Prerequisites:**
+*   Ensure [Docker](https://www.docker.com/) is installed and running.  
+*   (No other dependencies required; the app is self-contained).  
+  
+**Windows 64bit / Linux (ubuntu24 tested)**  
+*Note: ARM64 (Apple Silicon/Raspberry Pi) is not supported yet.*  
+| > Download and  extract the binary file from the zip files. \
+   ```
+   Run .exe to install the application on Windows.  
+   For Linux install with [sudo dpkg -i dist/forgecore_*.deb]. 
+   ```
 
-| > Prepare your dataset in YOLOv8 format with the required folder structure.
-| >Follow the UI steps:
+| > Prepare your dataset in YOLOv8 format with the required folder structure. and Yolo Yolo-style annotation   
+example:  
+0 0.793750 0.682813 0.412500 0.453125   
+class_id | x_center | y_center | width | height ,in nomralized space
+
+```
+root_folder/
+├── train/
+│   ├── image_name.jpg
+│   └── image_name.txt
+└── val/
+    ├── image_name.jpg
+    └── image_name.txt 
+```
+| >Follow the UI steps:    
 
     Step 1 — Build
-    Choose GPU or CPU mode depending on your system.
+    Select either GPU or CPU mode based on your system's capabilities.
 
     Step 2 — Training
     Select your dataset folder.
@@ -37,10 +57,10 @@ Windows / Linux(Ubuntu)
     The completed inference binary will appear in the specified output folder
 
 ## Notes: 
-1. The final .safetensors file will be located in:
-|your-root-data-dir|/run_with_early_stopping/weights
-If you want to retrain the network, remove this folder first.
-2. train_parameters.yaml is generated in |your-root-data-dir|. Modify it to adjust learning rate, epochs, or other parameters for your use case.
+1. The final .safetensors file will be located in:  
+|your-root-data-dir|/run_with_early_stopping/weights  
+If you want to retrain the network, remove this folder first.  
+2. train_parameters.yaml is generated in |your-root-data-dir|. You can modify it to adjust learning rate, epochs, or other parameters for your use case.  
 
 ## Example
 An example code is included showing how to load the generated binary and weight file for inference.
@@ -54,11 +74,11 @@ There is no defined roadmap and no commitment toward enterprise-level capabiliti
 
 This software is provided as a binary-only tool.
 
-✔ Free for personal or commercial use
-✔ Redistribution allowed (binary only, unmodified)
+✔ Free for personal or commercial use  
+✔ Redistribution allowed (binary only, unmodified)  
 
-✘ Modification of the binary is not allowed
-✘ Reverse engineering, decompiling, or disassembling is prohibited
-✘ Selling or claiming ownership of the binary is not permitted
+✘ Modification of the binary is not allowed  
+✘ Reverse engineering, decompiling, or disassembling is prohibited  
+✘ Selling or claiming ownership of the binary is not permitted  
 
 The source code is not public and remains fully owned by the author.
