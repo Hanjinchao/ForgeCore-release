@@ -1,13 +1,12 @@
 
-## OrgeCore Release Project
-```
+# OrgeCore Release Project
+
 OrgeCore is a free-to-use commercial binary tool designed to simplify training popular neural network models.
 It supports Windows and Linux, and includes optional Rust-based inference binary compilation.
 This project is open for public use, you can find the binary file from realease link
 
-```
 
-<Features>
+## Features 
 
 - Simple GUI workflow for training YOLO-style models
 - Supports YOLOv8-ready dataset structure
@@ -15,11 +14,11 @@ This project is open for public use, you can find the binary file from realease 
 - Automatically generates a parameter file for customization
 - Can compile an inference-ready binary using Rust
 
-<How to Use>
+## How to Use
 Windows / Linux(Ubuntu) 
-| > Download the binary from the Releases page.
-Install and run the application on window
-Install with [sudo dpkg -i dist/forgecore_*.deb].
+| > Download the binary from the Releases page. \
+ Install and run the application on Windows.  
+ Install with [sudo dpkg -i dist/forgecore_*.deb]. 
 
 | > Prepare your dataset in YOLOv8 format with the required folder structure.
 | >Follow the UI steps:
@@ -37,21 +36,21 @@ Install with [sudo dpkg -i dist/forgecore_*.deb].
     Run the final build step
     The completed inference binary will appear in the specified output folder
 
-Notes: 
+## Notes: 
 1. The final .safetensors file will be located in:
 |your-root-data-dir|/run_with_early_stopping/weights
 If you want to retrain the network, remove this folder first.
 2. train_parameters.yaml is generated in |your-root-data-dir|. Modify it to adjust learning rate, epochs, or other parameters for your use case.
 
-<Example>
-An example snippet is included showing how to load the generated binary and weight file for inference.
+## Example
+An example code is included showing how to load the generated binary and weight file for inference.
 
-<Project Status-Updates>
+## Project Status-Updates
 This is a personal project, not affiliated with any employer.
 Model updates or new features are delivered without a fixed schedule.
 There is no defined roadmap and no commitment toward enterprise-level capabilities—updates will come when possible.
 
-## License
+# License
 
 This software is provided as a binary-only tool.
 
